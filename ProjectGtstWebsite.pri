@@ -1,4 +1,4 @@
-include(../../Projects/ProjectGtst/ProjectGtstConsole.pri)
+include(ProjectGtstConsole.pri)
 
 SOURCES +=
 

@@ -6,6 +6,10 @@ if [ ! -d DotMatrix ]; then
   git clone https://github.com/richelbilderbeek/DotMatrix
 fi
 
+if [ ! -d Hometrainer ]; then
+  git clone https://github.com/richelbilderbeek/Hometrainer
+fi
+
 if [ ! -d plane ]; then
   git clone https://github.com/richelbilderbeek/plane
 fi
