@@ -157,7 +157,7 @@ void ribi::gtst::ParticipantDialog::OnTimedServerPush()
     const double f = static_cast<double>(std::rand())/static_cast<double>(RAND_MAX);
     double r,g,b;
     Rainbow::GetRgb(f,r,g,b);
-    m_ui.m_led->GetWidget()->GetLed()->SetColor(
+    m_ui.m_led->GetWidget()->GetLed().SetColor(
       r * 255.0,
       g * 255.0,
       b * 255.0);
