@@ -164,8 +164,6 @@ void ribi::gtst::Group::Clear()
 ///Collects all Participants in this Group as read-only pointers
 const std::vector<boost::shared_ptr<const ribi::gtst::Participant> > ribi::gtst::Group::CollectParticipants() const
 {
-  //TRACE_FUNC();
-  //TRACE(*this);
   std::vector<boost::shared_ptr<const Participant> > v;
   std::transform(m_participants.begin(),m_participants.end(),
     std::back_inserter(v),

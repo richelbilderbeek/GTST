@@ -264,7 +264,6 @@ std::string ribi::gtst::AdministratorDialogStateLoggedIn::GetExtension(const std
 
 void ribi::gtst::AdministratorDialogStateLoggedIn::OnGroupsChanged()
 {
-  TRACE_FUNC();
   m_ui.m_group_widget->SetShapes(ExtractShapes());
 
   //Display textual info
@@ -329,7 +328,6 @@ void ribi::gtst::AdministratorDialogStateLoggedIn::OnGroupsChanged()
 
     assert(!text.empty());
     m_ui.m_text_groups->setText(text.c_str());
-    TRACE_FUNC();
   }
 }
 

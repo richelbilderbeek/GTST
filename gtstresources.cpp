@@ -40,7 +40,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 ribi::gtst::Resources::Resources()
 {
-  TRACE_FUNC();
   //Create the default parameters file
   {
     const std::string filename  = "wt.css";

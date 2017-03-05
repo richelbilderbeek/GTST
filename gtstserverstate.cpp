@@ -126,7 +126,7 @@ ribi::gtst::Server * ribi::gtst::ServerState::GetServer() const
 int ribi::gtst::ServerState::GetTimeLeft() const
 {
   assert(m_stopwatch);
-  return m_wait_time - m_stopwatch->elapsed();
+  return m_wait_time - m_stopwatch->GetElapsedSecs();
 }
 
 void ribi::gtst::ServerState::GoToNextState()
@@ -145,6 +145,6 @@ void ribi::gtst::ServerState::ResetTimeLeft()
 void ribi::gtst::ServerState::SetTimeLeft(const int time)
 {
   //m_stopwatch.reset(new Stopwatch);
-  m_wait_time = m_stopwatch->elapsed() + time;
+  m_wait_time = m_stopwatch->GetElapsedSecs() + time;
 }
 

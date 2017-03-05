@@ -1,23 +1,3 @@
-//---------------------------------------------------------------------------
-/*
-GTST, Game Theory Server
-Copyright (C) 2011-2015 Richel Bilderbeek
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
-You should have received a copy of the GNU General Public License
-along with this program. If not, see <http://www.gnu.org/licenses/>.
-*/
-//---------------------------------------------------------------------------
-//From http://www.richelbilderbeek.nl/ProjectGtst.htm
-//---------------------------------------------------------------------------
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Weffc++"
 #pragma GCC diagnostic ignored "-Wunused-but-set-parameter"
@@ -74,7 +54,6 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 #include "shape.h"
 #include "shapewidget.h"
 #include "stopwatch.h"
-#include "trace.h"
 #include "widget.h"
 #include "wtaboutdialog.h"
 #include "wtautoconfig.h"
@@ -94,7 +73,6 @@ ribi::gtst::MenuDialog::MenuDialog(const SafeIpAddress * const ip_address)
   : m_server(Server::Get())
 {
   assert(m_server);
-  TRACE_FUNC();
   {
     //MainTimer::Get();
   }
@@ -355,8 +333,7 @@ const ribi::About ribi::gtst::MenuDialog::GetAbout()
   a.AddLibrary("Rainbow version: " + Rainbow::GetVersion());
   a.AddLibrary("Shape version: " + Shape::GetVersion());
   a.AddLibrary("ShapeWidget version: " + ShapeWidget::GetVersion());
-  a.AddLibrary("Stopwatch version: " + Stopwatch::GetVersion());
-  a.AddLibrary("Trace version: "  + Trace::GetVersion());
+  a.AddLibrary("Stopwatch version: " + Stopwatch().GetVersion());
   a.AddLibrary("Widget version: "  + Widget::GetVersion());
   a.AddLibrary("WtAutoConfig version: " + WtAutoConfig::GetVersion());
   a.AddLibrary("WtGroupWidget version: " + WtGroupWidget::GetVersion());
