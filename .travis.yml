@@ -35,6 +35,7 @@ before_script:
 
 script: 
   - ./download_other_githubs
+  - ./install_other_githubs
   # Website
   - qmake -qt=qt5 ProjectGtstWebsite.pro
   - make debug
